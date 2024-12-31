@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PUTTA SAI TEJA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        font-family: "Poppins", serif;
+      }
+      header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* You can change this to any color */
+  z-index: 1000; /* Ensures the header stays on top of other elements */
+  padding: 0px 0; /* Adjust the padding to your liking */
+}
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: #000000c6;
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover {
+        color: rgb(151, 101, 50);
+        font-size: 1rem;
+      }
+      main hr {
+        border: 0;
+        background: rgb(205, 239, 205);
+        height: 1.2px;
+        margin: 50px 35px;
+      }
+      .left {
+        font-size: 2rem;
+      }
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        margin: 120px 0;
+        align-items: top;
+      }
+      .firstSection > div {
+        width: 30%;
+      }
+      .leftSection {
+        font-size: 3rem;
+        margin-top: 0%;
+        color: #cda472;
+        align-items: top;
+      }
+      .rightSection img {
+        width: 70%;
+        border-radius: 15px; /* Optional, adds smooth corners */
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3); /* Creates a 3D shadow below */
+        transform: translateZ(
+          0
+        ); /* Ensures the image is rendered in the 3D plane */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+      }
+
+      .rightSection img:hover {
+        transform: scale(1.05); /* Slightly enlarges the image on hover */
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6),
+          0 8px 10px rgba(0, 0, 0, 0.4); /* Enhances the shadow on hover */
+      }
+
+      .black {
+        color: rgb(185, 115, 29);
+      }
+
+      #element {
+        color: #cda472;
+      }
+      .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the video covers the entire background */
+        z-index: -1; /* Places the video behind all content */
+      }
+      
+      .secondSection {
+        max-width: 80vw;
+        margin: auto;
+        height: 80vh;
+      }
+      .secondSection h1 {
+        font-size: 1.9rem;
+      }
+      .grey {
+        color: gray;
+      }
+      .secondSection .box {
+        background: white;
+        width: 80vw;
+        height: 2px;
+        margin: 65px 0;
+        display: flex;
+      }
+      .secondSection .vertical {
+        height: 93px;
+        width: 1px;
+        margin: 0 150px;
+        background-color: white;
+      }
+      .image-top {
+        width: 50px;
+        position: relative;
+        top: -45px;
+        left: -25px;
+      }
+      .virtical-title {
+        position: relative;
+        top: 60px;
+        width: 150px;
+        font-size: 14px;
+        color: #c38484;
+        display: inline-block;
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+      .virtical-title:hover {
+  transform: translateY(-10px); /* Moves the title upward */
+  color: #cda472; /* Changes the color on hover */
+}
+      .virtical-desc {
+        position: relative;
+    top: 90px;
+    width: 150px;
+    font-size: 9px;
+    color: grey;
+      }
+      .thirdSection {
+        max-width: 80vw;
+        margin: auto;
+        height: 100vh;
+        position: relative;
+      }
+      .thirdSection img {
+  position: relative;
+  width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth movement */
+}
+
+.thirdSection img:hover {
+  transform: scale(1.1) translateY(-10px); /* Enlarges and slightly moves the image upward */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Adds a shadow effect */
+}
+.footer {
+  background-color: rgb(3, 3, 9, 0%);
+  height: 20px;
+  display: flex;
+  justify-content: space-between; /* Space out the footer sections */
+  align-items: center;
+  margin: 23px 155px;
+  position: relative;
+}
+
+.footer-first h1 {
+  text-align: center; /* Center the text within its container */
+  margin: 10px auto; /* Center the element horizontally */
+  display: inline-block; /* Ensure the h2 adjusts to its content width */
+  width: 100%; /* Take full width of the parent container */
+}
+
+
+.social-icons {
+  display: flex;
+  flex-direction: row; /* Align icons in a row */
+  gap: 20px; /* Add space between icons */
+  margin-right: 30px; /* Space from the right edge of the footer */
+}
+
+.social-icons img {
+  width: 50px; /* Small icon size */
+  height: 50px; /* Maintain aspect ratio */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2) translateY(-5px); /* Zoom and slight upward motion */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+.social-icons-with-text {
+  display: flex;
+  align-items: center;
+}
+.social-icons a img {
+  width: 30px;  /* Adjust the size of the icons */
+  height: auto;
+}
+
+    </style>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Sai Teja</div>
+        <div class="right">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="https://drive.google.com/file/d/11dkbyvnjzU7ZCpQnXE5_uY0HyRAVW0Lk/view?usp=drive_link">Resume</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+
+            <li><a href="#contact">Contact me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          <div class="greeting">
+            <img src="" alt="" class="greeting-image">
+            <span id="home">Hello,</span>
+          </div>
+          <div><span class="black"></span></div>
+          <div></div>
+          <span id="element"></span>
+          <p style="font-size: medium; color: white;">I am a passionate and motivated individual eager to learn and grow in a dynamic organization. With strong proficiency in Python and MySQL, I excel in database management and programming. My technical expertise extends to web technologies such as HTML and CSS, along with experience in operating systems like Windows and Linux, and version control using Git. I also have hands-on experience with IoT technologies, including Arduino, Bluetooth modules, infrared sensors, and microcontrollers. A strong communicator with excellent interpersonal, analytical, and logical thinking skills, I am driven to contribute effectively to team success and organizational growth.
+
+          </p>
+          <div class="social-icons-with-text">
+            <p style="font-size: medium; color: burlywood; margin-right:20px">Contact:</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/sai-teja-putta-05093b26b/" target="_blank" title="LinkedIn">
+                <img src="in.png.png" alt="LinkedIn">
+              </a>
+              <a href="https://www.instagram.com/__t_e_j_a__/" target="_blank" title="Instagram">
+                <img src="insta.png.png" alt="Instagram">
+              </a>
+              <a href="mailto:teja49185@gmail.com" target="_blank" title="Email">
+                <img src="mail.png.png" alt="Email">
+              </a>
+              <a href="tel:+916301251533" target="_blank" title="Phone">
+                <img src="phone.png.png" alt="Phone">
+              </a>
+              <a href="https://github.com/TEJA214" target="_blank" title="Git Hub">
+                <img src="git.png.png" alt="Git">
+              </a>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="rightSection"><img src="bg1.png.jpg" alt="" /></div>
+      </section>
+      </section>
+      <hr />
+      <section class="secondSection">
+        <span class="grey">What I have done so far</span>
+        <h1 id="projects">Projects</h1>
+        <div class="box">
+          <div class="vertical">
+            <img src="aws.png.png" alt="" class="image-top" />
+            <a href="https://drive.google.com/file/d/1hJyJGDNHd5dkwMWBfH3GMyGpT7Qn4OR9/view?usp=drive_link">
+            <div class="virtical-title">
+              Configure Fault tolerance of Webserver (Aug2024-nov2024)
+            </div>
+          </a>
+            <div class="virtical-desc">
+              An Auto Scaling Group (ASG) is a logical collection of Amazon EC2 instances designed  for automatic scaling.Each instance within an ASG to the same auto-scaling  policies, which dictate how and when the instances should scale up. Auto Scaling Groups  and Amazon EC2 instances work together to provide a scalable, flexible, and resilient  cloud computing environment. ASGs ensure that the number of running instances meets the demand by automatically adjusting the capacity based on defined policies and metrics,  while EC2 instances deliver the necessary computational power and flexibility
+            </div>
+          </div>
+          <div class="vertical">
+            <img src="iot.png.png" alt="" class="image-top" />
+            <a href="https://drive.google.com/file/d/1SfN9XNqGzp9RN9uyOo_aidb1av4ptGRD/view?usp=drive_link">
+            <div class="virtical-title">
+              Driver Drowsiness Alert Using
+              Aurdino uno (Feb2024-Jun2024)
+            </div>
+          </a>
+            <div class="virtical-desc">
+              Drowsiness of the drivers is the main cause of accidents in the world. Due to
+lack of sleep and tiredness, drowsiness can occur while driving. Eye blinking is considered as important evidence of driver drowsiness, a portable and low-cost device for monitoring a driver's drowsiness is proposed. The proposed system consists of detect eye blinking based on IR sensors mounted on eyewear. The
+detected prolonged blinking is used to trigger an audio alarm system which draws the driver's attention back. By this product occurrence of accidents has been reduced in thisway.
+
+            </div>
+          </div>
+          <div class="vertical">
+            <img src="mgmt.png.png" alt="" class="image-top" />
+            <a href="https://drive.google.com/file/d/1-ryK2HlctAJ2jkM-eqH_KNWqGr54uXTi/view?usp=drive_link">
+            <div class="virtical-title">
+              Hostel Managment System (Aug2023-Dec2023)
+            </div>
+          </a>
+            <div class="virtical-desc">
+              Identification of the drawbacks of the existing system leads to the designing of computerized system that will be compatible to the existing system with the system which is more user friendly and more GUI oriented. We can improve the efficiency of the system, thus overcome the drawbacks of the existing system
+            </div>
+          </div>
+          <div class="vertical">
+            <img src="iot.png.png" alt="" class="image-top" />
+            <div class="virtical-title">
+              Smart Parking System (Nov2022-Feb2023)
+            </div>
+            <div class="virtical-desc">
+              The Smart Parking System using Arduino is an innovative solution designed to address the growing issue of parking space management in urban areas. With the increasing number of vehicles on the road, finding available parking spaces has become a major concern, leading to wasted time, fuel, and increased traffic congestion. This system uses a combination of sensors, microcontroller (Arduino), and wireless communication to monitor and manage parking spaces efficiently.
+            </div>
+            
+          </div>
+          
+        </div>
+      </section>
+      <hr>
+
+      <section class="thirdSection">
+        <span class="grey"></span>
+        <h1 id="certifications">Certifications</h1>
+<a href="https://drive.google.com/file/d/1jVLWJZiIGT-bFEgj3Q-Gkl5xeggj-ddT/view?usp=drive_link">
+        <img src="WD CERTIFICATE-1.png" alt="Web certificate" style="position: relative;
+        width: 400px;
+        top: 60px;
+        right: -40px;">
+</a>
+<a href="https://drive.google.com/file/d/1rsRnn6iMbNclgfFMMXpJQ8piuphGf-4O/view?usp=drive_link">
+      <img src="python certificate.png" alt="Web certificate" style="position: relative;
+      width: 400px;
+      top: 60px;
+      right: -90px;">
+</a>
+<a href="https://drive.google.com/file/d/1oSseZD8aKLR2XhTY3KdrHOrgzqO2Q7rg/view?usp=drive_link">
+      <img src="iot and embedded system certificate-1.png" alt="Web certificate" style="position: relative;
+      width: 400px;
+      top: 60px;
+      right: -140px;">
+</a>
+<a href="https://drive.google.com/file/d/10yxiTU6fkOszJxzh1f_8P5OzA57L_cX0/view?usp=drive_link">
+      <img src="python of data analysis certificate-1.png" alt="Web certificate" style="position: relative;
+      width: 400px;
+      top: 80px;
+      right: -40px;">
+</a>
+<a href="https://drive.google.com/file/d/10JM9WD-HuXXlkT7nlX-knW_XrJOcn9fq/view?usp=drive_link">
+      <img src="GuviCertification.png" alt="Web certificate" style="position: relative;
+      width: 400px;
+      top: 60px;
+      right: -90px;">
+</a>
+    </main>
+
+    <footer>
+      <hr style="border: 0; background: rgb(205, 239, 205); height: 1.2px; margin: 50px 35px;">
+      <div class="footer">
+        <div class="footer-first">
+          <h1 id="contact"  style="color: rgb(144, 49, 14);">Connect with me <img src="connect.png.png" alt="" style="width: 80px;"></h1>
+        </div>
+        <div class="footer-second"></div>
+        <div class="footer-third"></div>
+        <div class="footer-fourth"></div>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/sai-teja-putta-05093b26b/" target="_blank" title="LinkedIn">
+            <img src="in.png.png" alt="LinkedIn">
+          </a>
+          <a href="https://www.instagram.com/__t_e_j_a__/" target="_blank" title="Instagram">
+            <img src="insta.png.png" alt="Instagram">
+          </a>
+          <a href="mailto:teja49185@gmail.com" target="_blank" title="Email">
+            <img src="mail.png.png" alt="Email">
+          </a>
+          <a href="tel:+916301251533" target="_blank" title="Phone">
+            <img src="phone.png.png" alt="Phone">
+          </a>
+          <a href="https://github.com/TEJA214" target="_blank" title="Git Hub">
+            <img src="git.png.png" alt="Git">
+          </a>
+        </div>
+        
+      </div>
+    </footer>
+    
+    <span id="element"></span>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["TEJA here!"],
+        typeSpeed: 50,
+      });
+    </script>
+    <video autoplay muted loop class="background-video">
+      <source src="bg2.mp4.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </body>
+</html>
